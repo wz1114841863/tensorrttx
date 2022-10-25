@@ -1,4 +1,10 @@
+# 特定文件类型
 *.pth
 *.wts
 *.engine
 
+# vscode 产生的临时文件
+.vscode/
+
+# Cmake 工程目录
+build/
