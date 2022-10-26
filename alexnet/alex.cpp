@@ -1,6 +1,6 @@
 #include <NvInfer.h>
 #include <cuda_runtime_api.h>
-#include "logging.h"
+#include "../common/logging.h"
 #include <fstream>
 #include <map>
 #include <chrono>

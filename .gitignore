@@ -2,6 +2,7 @@
 *.pth
 *.wts
 *.engine
+*.onnx
 
 # vscode 产生的临时文件
 .vscode/

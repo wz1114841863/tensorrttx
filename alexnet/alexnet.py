@@ -211,7 +211,6 @@ def allocate_buffers(engine):
 
 
 def do_inference(context, bindings, inputs, outputs, stream, batch_size=1):
-    import pdb;pdb.set_trace()
     # Transformer input data to the GPU
     [cuda.memcpy_htod_async(inp.device, inp.host, stream) for inp in inputs]
     # Run inference
