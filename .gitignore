@@ -9,3 +9,8 @@
 
 # Cmake 工程目录
 build/
+
+# Cmake_tutorial 
+cmake_tutorial/
+
+__pycache__/
