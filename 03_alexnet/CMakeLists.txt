@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-project(resnet18)
+project(alexnet)
 
 add_definitions(-std=c++11)
 
@@ -17,8 +17,8 @@ link_directories(/usr/local/cuda-10.2/lib64/)
 include_directories(/usr/include/aarch64-linux-gnu/)
 link_directories(/usr/lib/aarch64-linux-gnu/)
 
-add_executable(resnet18 ${PROJECT_SOURCE_DIR}/resnet18_deploy.cpp)
-target_link_libraries(resnet18 nvinfer)
-target_link_libraries(resnet18 cudart)
+add_executable(alexnet ${PROJECT_SOURCE_DIR}/alexnet_engine.cpp)
+target_link_libraries(alexnet nvinfer)
+target_link_libraries(alexnet cudart)
 
 add_definitions(-O2 -pthread)

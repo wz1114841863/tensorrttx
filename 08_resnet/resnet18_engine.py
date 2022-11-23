@@ -18,7 +18,7 @@ OUTPUT_BLOB_NAME = "prob"
 EPS = 1e-5
 
 WEIGHT_PATH = "./resnet18.wts"
-ENGINE_PATH = "./resnet18.engine"
+ENGINE_PATH = "./resnet18_py.engine"
 
 TRT_LOGGER = trt.Logger(trt.Logger.INFO)
 

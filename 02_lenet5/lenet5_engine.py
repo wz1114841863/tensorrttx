@@ -8,6 +8,9 @@ import pycuda.autoinit
 import pycuda.driver as cuda
 import tensorrt as trt
 
+"""
+    tensorRT 7 有bug， Could not find any implementation for node 2-layer MLP，8.0以上修复
+"""
 INPUT_H = 32
 INPUT_W = 32
 OUTPUT_SIZE = 10

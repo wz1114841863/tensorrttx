@@ -1,9 +1,10 @@
 #include <NvInfer.h>
 #include <cuda_runtime_api.h>
-#include "../common/logging.h"
 #include <fstream>
 #include <map>
 #include <chrono>
+
+#include "../lib_cpp/logging.h"
 
 
 #define CHECK(status) \

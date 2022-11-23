@@ -4,8 +4,8 @@
 #include <map>
 #include <chrono>
 
-#include "../common/logging.h"
-#include "../common/com_function.hpp"
+#include "../lib_cpp/logging.h"
+#include "../lib_cpp/com_function.h"
 
 // stuff we know about the network and the input/output blobs
 static const int INPUT_H = 32;

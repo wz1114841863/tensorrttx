@@ -1,7 +1,5 @@
 #include <NvInfer.h>
 #include <cuda_runtime_api.h>
-#include "../common/logging.h"
-
 #include <fstream>
 #include <iostream>
 #include <map>
@@ -9,6 +7,9 @@
 #include <vector>
 #include <chrono>
 #include <cmath>
+
+#include "../lib_cpp/logging.h"
+
 
 #define CHECK(status) \
     do { \
@@ -54,7 +55,7 @@ std::map<std::string, Weights> loadWeights(const std::string file) {
         // Read name and type of blob
         std::string name;
         input >> name >> std::dec >> size;
-        std::cout << "name: " << name << std::endl;
+        // std::cout << "name: " << name << std::endl;
         wt.type = DataType::kFLOAT;
 
         // Load blob

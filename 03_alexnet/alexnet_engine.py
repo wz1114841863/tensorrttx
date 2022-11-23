@@ -17,19 +17,20 @@ INPUT_BLOB_NAME = "data"
 OUTPUT_BLOB_NAME = "prob"
 
 WEIGHT_PATH = "./alexnet.wts"
-ENGINE_PATH = "./alexnet.engine"
+ENGINE_PATH = "./alexnet_py.engine"
 
 TRT_LOGGER = trt.Logger(trt.Logger.INFO)
 
 
-def load_weights(file):
-    print(f"Loading weights from {file}.")
-    # assert os.path.exists(file), f"Unable to load weight file."
+def load_weights(file_path):
+    print(f"Loading weights: {file_path}")
+    assert os.path.exists(file_path), "Unable to load weight file."
+
     weight_map = {}
-    with open(file, "r") as fp:
-        lines = [line.strip() for line in fp]
+    with open(WEIGHT_PATH, "r") as fp:
+        lines = [line.strip() for line in fp]  # 移除字符串头尾指定的字符（默认为空格）
     count = int(lines[0])
-    assert count == len(lines) - 1, f"error in length of lines"
+    assert count == len(lines) - 1
     for i in range(1, count + 1):
         splits = lines[i].split(" ")
         name = splits[0]
@@ -40,6 +41,7 @@ def load_weights(file):
             # hex string to bytes to float
             values.append(struct.unpack(">f", bytes.fromhex(splits[j])))
         weight_map[name] = np.array(values, dtype=np.float32)
+    
     return weight_map
 
 

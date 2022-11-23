@@ -6,8 +6,8 @@
 #include <fstream>
 #include <chrono>
 
+#include "../lib_cpp/logging.h"
 
-#include "../common/logging.h"
 
 // provided by nvidia for using TensorRT APIS
 using namespace nvinfer1;

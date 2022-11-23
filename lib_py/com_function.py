@@ -19,6 +19,19 @@ OUTPUT_BLOB_NAME = ""
 # engine_path = ""
 
 gLogger = trt.Logger(trt.Logger.INFO)
+def save_weights(net, weight_path, is_print=False):
+    f = open(weight_path, 'w')
+    f.write("{}\n".format(len(net.state_dict().keys())))
+    for k,v in net.state_dict().items():
+        if is_print:
+            print('key: ', k)
+            print('value: ', v.shape)
+        vr = v.reshape(-1).cpu().numpy()
+        f.write("{} {}".format(k, len(vr)))
+        for vv in vr:
+            f.write(" ")
+            f.write(struct.pack(">f", float(vv)).hex())
+        f.write("\n")
 
 def load_weights(file_path, weight_path):
     print(f"Loading weights: {file_path}")
