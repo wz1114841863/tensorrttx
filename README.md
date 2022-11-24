@@ -6,3 +6,4 @@ alexnet: easy to implement, all layers are supported in tensorrt
 googlenet: GoogLeNet (Inception v1)
 inception: inceptionV3 and inceptionV4
 resnet: resnet-18 are implemented
+mnasnet: MNASNet with depth multiplier of 0.5 from the paper
