@@ -6,7 +6,7 @@ from torchsummary import summary
 
 import init_paths
 # print(sys.path)
-from py_com_files import save_weights
+from lib_py import save_weights
 
 def main():
     print(f"cuda device count: {torch.cuda.device_count()}")
