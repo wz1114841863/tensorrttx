@@ -7,3 +7,4 @@ googlenet: GoogLeNet (Inception v1)
 inception: inceptionV3 and inceptionV4
 resnet: resnet-18 are implemented
 mnasnet: MNASNet with depth multiplier of 0.5 from the paper
+mobilenet: mobilenet v2 and v3
