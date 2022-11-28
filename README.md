@@ -9,3 +9,6 @@ resnet: resnet-18 are implemented
 mnasnet: MNASNet with depth multiplier of 0.5 from the paper
 mobilenet: mobilenet v2 and v3
 senet: senet based on resnet50
+shufflenet: ShuffleNet v2 with 0.5x output channels
+squeezenet: SqueezeNet 1.1 model
+vgg: VGG 11-layer model
